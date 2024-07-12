@@ -1,24 +1,63 @@
-import { useState, useRef } from "react"
-import { motion } from "framer-motion"
-import emailjs from "@emailjs/browser"
+import React, { useRef, useState } from "react";
+import { motion } from "framer-motion";
+import emailjs from "@emailjs/browser";
 
-import { styles } from "../styles"
-import { EarthCanvas } from "./canvas"
-import { SectionWrapper } from "../hoc"
-import { slideIn } from "../utils/motion"
+import { styles } from "../styles";
+import { EarthCanvas } from "./canvas";
+import { SectionWrapper } from "../hoc";
+import { slideIn } from "../utils/motion";
 
 const Contact = () => {
-  const formRef = useRef()
+  const formRef = useRef();
   const [form, setForm] = useState({
-    name: '',
-    email: '',
-    message: '',
-  })
-  const [loading, setLoading] = useState(false)
+    name: "",
+    email: "",
+    message: "",
+  });
 
-  const handleChange = (e) => { }
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e) => { }
+  const handleChange = (e) => {
+    const { target } = e;
+    const { name, value } = target;
+
+    setForm({
+      ...form,
+      [name]: value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    emailjs.send(
+      import.meta.env.VITE_SERVICE_ID,
+      import.meta.env.VITE_TEMPLATE_ID,
+      {
+        from_name: form.name,
+        to_name: 'Kaviraj A',
+        from_email: form.email,
+        to_email: import.meta.env.VITE_USER_EMAIL,
+        message: form.message,
+      },
+      import.meta.env.VITE_PUBLIC_KEY
+    ).then(() => {
+      setLoading(false);
+      alert('Thank You. I will get back you as soon as possible.');
+
+      setForm({
+        name: '',
+        email: '',
+        message: '',
+      })
+    }, (error) => {
+      setLoading(false);
+
+      console.log("Error while sending email: ",error);
+      alert('Error while sending email. Please try again later.')
+    })
+  }
 
   return (
     <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden">
