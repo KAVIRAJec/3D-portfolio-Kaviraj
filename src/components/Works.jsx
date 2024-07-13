@@ -3,11 +3,12 @@ import { motion } from "framer-motion"
 
 import { styles } from "../styles"
 import { github } from "../assets"
+import { deploy } from "../assets"
 import { SectionWrapper } from "../hoc"
 import { projects } from "../constants"
 import { fadeIn, textVariant } from "../utils/motion"
 
-const ProjectCard = ({ index, name, description, tags, image, source_code_link }) => {
+const ProjectCard = ({ index, name, description, tags, image, source_code_link, live_link }) => {
   return (
     <motion.div
       variants={fadeIn("up", "spring", index * 0.5, 0.75)}
@@ -40,11 +41,11 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
             </div>
 
             <div
-              onClick={() => window.open(source_code_link, "_blank")}
+              onClick={() => window.open(live_link, "_blank")}
               className="mx-2 black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
             >
               <img
-                src={github}
+                src={deploy}
                 alt="live_demo"
                 className="w-6 h-6"
               />

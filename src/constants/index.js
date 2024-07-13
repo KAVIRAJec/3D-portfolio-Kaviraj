@@ -8,21 +8,24 @@ import {
     html,
     css,
     reactjs,
-    redux,
     tailwind,
     nodejs,
     mongodb,
     git,
-    figma,
     docker,
     meta,
     starbucks,
     tesla,
     shopify,
-    carrent,
-    jobit,
-    tripguide,
-    threejs,
+    discord,
+    pinterest,
+    MERN,
+    nextjs,
+    mysql,
+    express,
+    azure,
+    reactNative,
+    database,
   } from "../assets";
   
   export const navLinks = [
@@ -69,6 +72,10 @@ import {
       icon: css,
     },
     {
+      name: "Tailwind CSS",
+      icon: tailwind,
+    },
+    {
       name: "JavaScript",
       icon: javascript,
     },
@@ -77,37 +84,49 @@ import {
       icon: typescript,
     },
     {
+      name: "Next JS",
+      icon: nextjs,
+    },
+    {
       name: "React JS",
       icon: reactjs,
-    },
-    {
-      name: "Redux Toolkit",
-      icon: redux,
-    },
-    {
-      name: "Tailwind CSS",
-      icon: tailwind,
-    },
+    },    
     {
       name: "Node JS",
       icon: nodejs,
     },
     {
-      name: "MongoDB",
-      icon: mongodb,
+      name: "Express JS",
+      icon: express,
+    },
+    // {
+    //   name: "MongoDB",
+    //   icon: mongodb,
+    // },
+    {
+      name: "MySQL",
+      icon: mysql,
     },
     {
-      name: "Three JS",
-      icon: threejs,
+      name: "Azure",
+      icon: azure,
     },
     {
       name: "git",
       icon: git,
     },
-    {
-      name: "figma",
-      icon: figma,
-    },
+    // {
+    //   name: "figma",
+    //   icon: figma,
+    // },
+    // {
+    //   name: "ShadCN UI",
+    //   icon: tailwind,
+    // },
+    // {
+    //   name: "Material UI",
+    //   icon: tailwind,
+    // },
     {
       name: "docker",
       icon: docker,
@@ -116,55 +135,51 @@ import {
   
   const experiences = [
     {
-      title: "React.js Developer",
-      company_name: "Starbucks",
-      icon: starbucks,
+      title: "React & NodeJS Developer",
+      duration: "2 years",
+      icon: reactjs,
       iconBg: "#383E56",
-      date: "March 2020 - April 2021",
       points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
+        "Experienced in building web applications using React,Node,MERN, and other relevant technologies.",
+        "Skilled in creating user interfaces with CSS frameworks like Tailwind CSS and Material UI.",
+        "Implemented user authentication and authorization mechanisms using JWT, OAuth, and other libraries.",
+        "Built individual projects including Pinterest clone, IoT projects, and a voice assistant and so.Skilled in deploying applications using platforms like Vercel and Render.",
       ],
     },
     {
       title: "React Native Developer",
-      company_name: "Tesla",
-      icon: tesla,
+      duration: "1 years",
+      icon: reactNative,
       iconBg: "#E6DEDD",
-      date: "Jan 2021 - Feb 2022",
       points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
+        "Experience in cross-platform mobile app development using React Native.",
+        "Utilized various mobile dashboard components to create user-friendly interfaces.",
+        "Worked in Iot project which is used to have complete control using mobile app.",
+        "Integrated the mobile app with a Node.js backend for managing large amounts of data.",
       ],
     },
     {
-      title: "Web Developer",
-      company_name: "Shopify",
-      icon: shopify,
+      title: "NextJS Developer",
+      duration: "1 years",
+      icon: nextjs,
       iconBg: "#383E56",
-      date: "Jan 2022 - Jan 2023",
       points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
+        "Developed web applications using Next.js, React.js, and TypeScript",
+        "Optimized the performance of web applications by Next.js build process.",
+        "Developed large-scale applications with capable of handling both client-side and server-side operations.",
+        "Build a fully functional Discord clone with real-time messaging, voice/video calls, and other features.",
       ],
     },
     {
-      title: "Full stack Developer",
-      company_name: "Meta",
-      icon: meta,
-      iconBg: "#E6DEDD",
-      date: "Jan 2023 - Present",
+      title: "Database Developer",
+      duration: "2 years",
+      icon: database,
+      iconBg: "#c7d1d6",
       points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
+        "Proficient in both relational databases (MySQL) and NoSQL databases (MongoDB), along with cloud solutions like Azure and Aiven.",
+        "Utilized ORM tools like Prisma to enhance database performance.",
+        "Developed a vehicle booking platform with user management, booking system, and admin functionalities(CRUD) using MongoDB Atlas.",
+        "Experienced in writing query to access tables and run any complex operations in MySQL database",
       ],
     },
   ];
@@ -198,67 +213,70 @@ import {
   
   const projects = [
     {
-      name: "Car Rent",
+      name: "Discord Clone",
       description:
-        "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+        "A Discord clone built with Next.js, React.js, and TypeScript, featuring real-time messaging, file attachment, voice/video calls, member & server management and more using multiple open source libraries.",
       tags: [
         {
-          name: "react",
+          name: "Next JS",
           color: "blue-text-gradient",
         },
         {
-          name: "mongodb",
+          name: "Prisma",
           color: "green-text-gradient",
         },
         {
-          name: "tailwind",
+          name: "tailwind & ShadCN UI",
           color: "pink-text-gradient",
         },
       ],
-      image: carrent,
-      source_code_link: "https://github.com/",
+      image: discord,
+      live_link: "https://discord-clone-production-2131.up.railway.app/",
+      source_code_link: "https://github.com/KAVIRAJec/Discord-clone",
     },
     {
-      name: "Job IT",
+      name: "Image Sharing Platform (Pinterest Clone)",
       description:
-        "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+        "This project has the multiple features like google login, image uploding , separating images with the specified category, save the pins , delete the pins and some additional functionalities.",
       tags: [
         {
-          name: "react",
+          name: "react JS",
           color: "blue-text-gradient",
         },
         {
-          name: "restapi",
+          name: "Sanity IO",
           color: "green-text-gradient",
         },
         {
-          name: "scss",
+          name: "Tailwind CSS",
           color: "pink-text-gradient",
         },
       ],
-      image: jobit,
-      source_code_link: "https://github.com/",
+      image: pinterest,
+      live_link: "https://pintrest-clone-henna.vercel.app/",
+      source_code_link: "https://github.com/KAVIRAJec/Pintrest-Clone",
     },
     {
-      name: "Trip Guide",
+      name: "Vehile Booking platform MERN",
       description:
-        "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+        "Built a full-stack vehicle booking website for my college (MERN stack) with user management, booking system, and admin functionalities(CRUD) using ShadCN UI, RsuiteJS, and MongoDB Atlas.",
       tags: [
         {
-          name: "nextjs",
+          name: "MERN",
           color: "blue-text-gradient",
         },
         {
-          name: "supabase",
+          name: "ShadCN UI",
           color: "green-text-gradient",
         },
         {
-          name: "css",
+          name: "MongoDB Atlas",
           color: "pink-text-gradient",
         },
       ],
-      image: tripguide,
-      source_code_link: "https://github.com/",
+      image: MERN,
+      live_link: "https://vehicle-booking-management.herokuapp.com/",
+      source_code_link: "https://github.com/KAVIRAJec/Vehicle-Booking-Data-Management-MERN-",
     },
   ];
   
